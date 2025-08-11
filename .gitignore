@@ -22,3 +22,7 @@ website/i18n/*
 
 # Local Vercel folder
 .vercel
+
+# PDF generation output
+output/
+pdf_output/

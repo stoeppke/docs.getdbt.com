@@ -62,3 +62,27 @@ You can click a link available in a Vercel bot PR comment to see and review your
 
 Advisory:
 - If you run into an `fatal error: 'vips/vips8' file not found` error when you run `npm install`, you may need to run `brew install vips`. Warning: this one will take a while -- go ahead and grab some coffee!
+
+# Generating PDFs
+
+To generate a PDF version of the documentation, you can use the `generate_pdfs.py` script.
+
+## Prerequisites
+
+- [Pandoc](https://pandoc.org/installing.html)
+- [WeasyPrint](https://weasyprint.org/)
+- [pdftk](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
+
+## Usage
+
+To generate all sections:
+```bash
+python3 generate_pdfs.py
+```
+
+To generate specific sections:
+```bash
+python3 generate_pdfs.py --sections docs reference
+```
+
+The script will create an `output` directory with the generated PDFs, split by section.
